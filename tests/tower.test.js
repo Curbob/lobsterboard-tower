@@ -52,7 +52,7 @@ describe('tower catalog', () => {
   });
 
   // Widgets merged into LobsterBoard but not in a published release yet.
-  const NOT_YET_RELEASED = ['media-youtarr'];
+  const NOT_YET_RELEASED = [];
 
   it('only lists real widget types', () => {
     expect(Object.keys(CAT).filter(t => !W[t] && !NOT_YET_RELEASED.includes(t))).toEqual([]);
