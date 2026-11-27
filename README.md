@@ -63,3 +63,7 @@ npm test
 - `js/live.js`: turns each widget's data into a state, using the same LobsterBoard endpoints the widgets use.
 - `api.cjs`: settings.
 - `assets/`: the art.
+
+## License
+
+[MIT](LICENSE). Lobster Tower is an add-on; LobsterBoard itself has its own license.
