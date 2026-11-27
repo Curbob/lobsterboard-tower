@@ -1,0 +1,8 @@
+{
+  "id": "tower",
+  "title": "Lobster Tower",
+  "icon": "🏢",
+  "description": "A cutaway building where every widget on your dashboard is a room with an avatar showing what that service is doing",
+  "order": 20,
+  "standalone": true
+}

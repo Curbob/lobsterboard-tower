@@ -1,0 +1,16 @@
+{
+  "name": "lobsterboard-tower",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Lobster Tower: a LobsterBoard add-on page that turns your dashboard into a cutaway building of working avatars",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "check:latest": "npm i --no-save lobsterboard@latest && vitest run"
+  },
+  "devDependencies": {
+    "jsdom": "^29.0.1",
+    "lobsterboard": "latest",
+    "vitest": "^4.1.2"
+  }
+}
