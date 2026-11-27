@@ -25,6 +25,7 @@ const CATALOG = {
   'media-sonarr':    { label: 'Sonarr',   room: 'library', avatar: true, cast: 'sonarr', walk: true,   icon: '📺', read: () => `${rnd(1300, 1500)} episodes · ${rnd(0, 6)} queued` },
   'media-seerr':     { label: 'Seerr',    room: 'desk',    avatar: true, cast: 'seerr', walk: true,    icon: '🙋', read: () => `${rnd(0, 5)} pending · ${rnd(5, 20)} approved` },
   'media-prowlarr':  { label: 'Prowlarr', room: 'radio',   avatar: true, cast: 'prowlarr', walk: true, icon: '🔎', read: () => `${rnd(3, 6)} indexers · ${rnd(200, 900)} grabs` },
+  'media-youtarr':   { label: 'Youtarr',  room: 'vault',   avatar: true, cast: 'youtarr', walk: true,  icon: '📹', read: () => `${rnd(20, 60)} channels · ${rnd(0, 5)} downloading` },
   'media-sabnzbd':   { label: 'SABnzbd',  room: 'dock',    avatar: true, cast: 'sab', frames: true, icon: '⬇️', read: () => `${(Math.random() * 40).toFixed(1)} MB/s · ${rnd(0, 7)} in queue` },
   // system
   'cpu-memory':        { label: 'CPU',      room: 'servers',  avatar: true, cast: 'servers', walk: true, gym: false, icon: '💻', read: () => `CPU ${rnd(2, 70)}% · RAM ${rnd(30, 80)}%` },
@@ -84,6 +85,7 @@ const ROOMS = {
   cinema:     { name: 'Cinema', group: 'media', art: 'cinema', ar: 1.61, props: [{ n: 'couch', x: 37, w: 44, b: 6 }], spots: [{ x: 37, pose: 'sitting', h: .4, b: .15 }] },
   library:    { name: 'Media Library', group: 'media', art: 'library', ar: 2.33, spots: [{ x: 27 }, { x: 66 }] },
   desk:       { name: 'Front Desk', group: 'media', art: 'desk', ar: 1.61, props: [{ n: 'counter', x: 50, w: 74, b: 5, z: 'front' }], spots: [{ x: 46, b: .13, h: .56 }] },
+  vault:      { name: 'Video Vault', group: 'media', art: 'vault', ar: 2.68, spots: [{ x: 69 }] },
   radio:      { name: 'Radio Room', group: 'media', art: 'radio', ar: 2.33, spots: [{ x: 63 }] },
   newsroom:   { name: 'Newsroom', group: 'content', art: 'newsroom', ar: 1.63, props: [{ n: 'newsdesk', x: 50, w: 62, b: 5, z: 'front' }], spots: [{ x: 50, pose: 'sitting', h: .46, b: .15 }] },
   music:      { name: 'Music Booth', group: 'content', art: 'music', ar: 2.08, spots: [{ x: 54, flip: true }] },

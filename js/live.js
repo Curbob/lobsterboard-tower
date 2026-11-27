@@ -49,6 +49,13 @@ const ADAPTERS = {
   // media server
   'media-plex': media('plex', s => ({ state: s.streams > 0 ? 'working' : 'idle',
     read: `${s.streams || 0} streaming${s.transcoding ? ` · ${s.transcoding} transcoding` : ''} · ${s.movies || 0} movies · ${s.shows || 0} shows` })),
+  'media-youtarr': media('youtarr', (s, d) => {
+    const lib = `${s.channels || 0} channels · ${s.videos || 0} videos`;
+    if (s.downloading > 0 || s.active) return { state: 'working', read: `${s.downloading || 0} downloading · ${s.queued || 0} queued · ${lib}` };
+    if (s.paused) return { state: 'alert', read: `Downloads paused by the storage limit · ${lib}` };
+    if (d.lastRun && d.lastRun.status === 'error') return { state: 'alert', read: `Last run failed (${d.lastRun.failed || 0} failed) · ${lib}` };
+    return { state: 'idle', read: `${s.queued ? s.queued + ' queued · ' : ''}${lib}` };
+  }),
   'media-radarr': media('radarr', s => ({ state: s.queue > 0 ? 'working' : 'idle',
     read: `${s.onDisk || 0}/${s.movies || 0} movies on disk · ${s.queue || 0} queued · ${s.missing || 0} missing` })),
   'media-sonarr': media('sonarr', s => ({ state: s.queue > 0 ? 'working' : 'idle',

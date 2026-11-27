@@ -12,7 +12,7 @@ const GROUP_ORDER = window.TOWER_GROUPS.order, WORK_GROUPS = window.TOWER_GROUPS
 /* Demo dashboards. Inside LobsterBoard the list comes from the page's own config. */
 const PRESETS = {
   all:       { name: 'Everything', types: null },
-  media:     { name: 'Media server', types: ['media-plex', 'media-radarr', 'media-sonarr', 'media-seerr', 'media-prowlarr', 'media-sabnzbd', 'weather', 'clock', 'text-header'] },
+  media:     { name: 'Media server', types: ['media-plex', 'media-radarr', 'media-sonarr', 'media-seerr', 'media-prowlarr', 'media-sabnzbd', 'media-youtarr', 'weather', 'clock', 'text-header'] },
   homelab:   { name: 'Homelab', types: ['media-plex', 'media-radarr', 'media-sonarr', 'media-sabnzbd', 'cpu-memory', 'disk-usage', 'uptime-monitor', 'docker-containers', 'network-speed', 'api-status', 'weather', 'clock', 'lobsterboard-release', 'release'] },
   developer: { name: 'Developer', types: ['claude-code', 'codex-cli', 'cursor', 'github-copilot', 'ai-cost-tracker', 'github-stats', 'todo-list', 'pomodoro', 'calendar', 'email-count', 'rss-ticker', 'now-playing', 'clock', 'countdown', 'weather', 'cpu-memory', 'lobsterboard-release'] },
 };

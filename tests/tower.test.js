@@ -51,8 +51,11 @@ describe('tower catalog', () => {
     expect(missing, 'new LobsterBoard widgets: add them to js/catalog.js (TOWER_CATALOG or TOWER_NONE)').toEqual([]);
   });
 
+  // Widgets merged into LobsterBoard but not in a published release yet.
+  const NOT_YET_RELEASED = ['media-youtarr'];
+
   it('only lists real widget types', () => {
-    expect(Object.keys(CAT).filter(t => !W[t])).toEqual([]);
+    expect(Object.keys(CAT).filter(t => !W[t] && !NOT_YET_RELEASED.includes(t))).toEqual([]);
     expect(NONE.filter(t => !W[t])).toEqual([]);
     expect(Object.keys(CAT).filter(t => NONE.includes(t))).toEqual([]);
   });
